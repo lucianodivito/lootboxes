@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Crate 1",
+    "tokensPrice": 100,
+    "realPrice": 0.99,
+    "rarity": "common",
+    "isFavorited": true
+  },
+  {
+    "id": 2,
+    "name": "Crate 2",
+    "tokensPrice": 100,
+    "realPrice": 0.99,
+    "rarity": "common",
+    "isFavorited": true
+  },
+  {
+    "id": 3,
+    "name": "Crate 3",
+    "tokensPrice": 250,
+    "realPrice": 1.99,
+    "rarity": "rare",
+    "isFavorited": false
+  },
+  {
+    "id": 4,
+    "name": "Crate 4",
+    "tokensPrice": 250,
+    "realPrice": 1.99,
+    "rarity": "rare",
+    "isFavorited": false
+  },
+  {
+    "id": 5,
+    "name": "Crate 5",
+    "tokensPrice": 500,
+    "realPrice": 4.99,
+    "rarity": "epic",
+    "isFavorited": false
+  },
+  {
+    "id": 6,
+    "name": "Crate 6",
+    "tokensPrice": 500,
+    "realPrice": 4.99,
+    "rarity": "epic",
+    "isFavorited": false
+  },
+  {
+    "id": 7,
+    "name": "Crate 7",
+    "tokensPrice": 1000,
+    "realPrice": 9.99,
+    "rarity": "legendary",
+    "isFavorited": false
+  },
+  {
+    "id": 8,
+    "name": "Crate 8",
+    "tokensPrice": 1000,
+    "realPrice": 9.99,
+    "rarity": "legendary",
+    "isFavorited": false
+  }
+]
