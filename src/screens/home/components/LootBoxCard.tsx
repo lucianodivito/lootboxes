@@ -21,6 +21,8 @@ import rareCrate from '../../../../assets/crates/rareCrate.png';
 import epicCrate from '../../../../assets/crates/epicCrate.png';
 import legendaryCrate from '../../../../assets/crates/legendaryCrate.png';
 
+import pattern from '../../../../assets/patterns/pattern.png';
+
 import {
   getRarityBadgeGradient,
   getBackgroundGradient,
@@ -68,11 +70,17 @@ const LootBoxCard: React.FC<LootboxProps> = ({
       start={{x: 0.5, y: 0}}
       end={{x: 0.5, y: 1}}
       style={styles.card}>
+      {/* Pattern overlay, above gradient but below content */}
+      <ImageBackground
+        source={pattern}
+        resizeMode="cover"
+        style={StyleSheet.absoluteFillObject}
+        imageStyle={{opacity: 0.5}} // Opcional: controla visibilidad
+      />
+
       {/* Rarity badge */}
       <View style={styles.cardTop}>
         <LinearGradient
-          // start={{x: 0, y: 0}}
-          // end={{x: 1, y: 0}}
           colors={getRarityBadgeGradient(rarity)}
           style={styles.badgeContainer}>
           <Text category="label" style={{color: 'white'}}>
@@ -80,7 +88,6 @@ const LootBoxCard: React.FC<LootboxProps> = ({
           </Text>
         </LinearGradient>
 
-        {/* Icon */}
         <FavoriteIcon
           isFavorited={isFavorited}
           onPress={() => {
@@ -89,7 +96,6 @@ const LootBoxCard: React.FC<LootboxProps> = ({
         />
       </View>
 
-      {/* Glow and image */}
       <View style={styles.imageContainer}>
         <ImageBackground
           source={glowingGray}
@@ -113,23 +119,9 @@ const LootBoxCard: React.FC<LootboxProps> = ({
         </ImageBackground>
       </View>
 
-      {/* Crate name */}
       <View style={styles.nameContainer}>
-        <Text category="h6">{name}</Text>
+        <Text category="h5">{name}</Text>
       </View>
-
-      {/* Open button */}
-      {/* <Button
-        size="small"
-        style={styles.button}
-        // accessoryRight={() => (
-        //   <Text style={styles.realPriceText} category="label">
-        //     ($ {realPrice})
-        //   </Text>
-        // )}
-      >
-        View
-      </Button> */}
     </LinearGradient>
   );
 };
@@ -177,7 +169,7 @@ const styles = StyleSheet.create({
   },
   glowImage: {
     borderRadius: 10,
-    opacity: 1,
+    opacity: 0,
     resizeMode: 'contain',
   },
   image: {
@@ -188,22 +180,9 @@ const styles = StyleSheet.create({
   },
   nameContainer: {
     width: '100%',
-    height: '20%', // aumentado
+    height: '20%',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  button: {
-    width: '100%',
-    borderRadius: 25,
-    justifyContent: 'center',
-    // shadowColor: '#3cf8ff',
-    // shadowOffset: {width: 2, height: 2},
-    // shadowOpacity: 0.5,
-    // shadowRadius: 8,
-    // elevation: 4,
-  },
-  realPriceText: {
-    color: '#7eb2fb',
   },
   icon: {
     width: 26,
