@@ -18,9 +18,7 @@ const Avatar: React.FC<AvatarProps> = ({name, surname, size = 50}) => {
   const styles = useStyleSheet(themedStyles);
 
   return (
-    <ImageBackground
-      style={[styles.avatar, {width: size, height: size}]}
-      imageStyle={styles.avatarImage}>
+    <ImageBackground style={[styles.avatar, {width: size, height: size}]}>
       <Text style={styles.initials}>{getInitials(name, surname)}</Text>
     </ImageBackground>
   );
@@ -33,9 +31,6 @@ const themedStyles = StyleService.create({
     backgroundColor: '#479fff',
     borderRadius: 9999,
     marginRight: 12,
-  },
-  avatarImage: {
-    borderRadius: 9999,
   },
   initials: {
     fontWeight: 'bold',

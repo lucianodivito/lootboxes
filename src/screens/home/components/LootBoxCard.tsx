@@ -6,15 +6,12 @@ import {
   ImageBackground,
   Image,
   TouchableOpacity,
-  GestureResponderEvent,
-  Pressable,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-import glowLightBlue from '../../../../assets/glowings/glow-light-blue.png';
+import FavoriteIcon from './FavoriteIcon';
+
 import glowingGray from '../../../../assets/glowings/glow-gray.png';
-import glowPurple from '../../../../assets/glowings/glow-purple.png';
-import glowYellow from '../../../../assets/glowings/glow-yellow.png';
 
 import commonCrate from '../../../../assets/crates/commonCrate.png';
 import rareCrate from '../../../../assets/crates/rareCrate.png';
@@ -23,30 +20,18 @@ import legendaryCrate from '../../../../assets/crates/legendaryCrate.png';
 
 import pattern from '../../../../assets/patterns/pattern.png';
 
+import {useNavigation} from '@react-navigation/native';
+import {RootStackParamList} from '../../../navigation/StackNavigator';
+import {StackNavigationProp} from '@react-navigation/stack';
+
 import {
   getRarityBadgeGradient,
   getBackgroundGradient,
-} from '../utils/getCardGradients';
-
-type FavoriteIconProps = {
-  isFavorited: Boolean;
-  onPress: (event: GestureResponderEvent) => void;
-};
-
-const FavoriteIcon = ({
-  isFavorited,
-  onPress,
-}: FavoriteIconProps): React.JSX.Element => (
-  <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
-    <Icon
-      style={styles.icon}
-      fill={isFavorited ? '#FFD700' : '#8F9BB3'}
-      name={isFavorited ? 'star' : 'star-outline'}
-    />
-  </TouchableOpacity>
-);
+  getCardColor,
+} from '../utils/getCardColors';
 
 export type LootboxProps = {
+  id: number;
   name: string;
   tokensPrice: number;
   realPrice: number;
@@ -54,46 +39,47 @@ export type LootboxProps = {
   isFavorited: Boolean;
 };
 
+type NavigationProp = StackNavigationProp<RootStackParamList, 'Details'>;
+
 const LootBoxCard: React.FC<LootboxProps> = ({
   name,
-  tokensPrice,
-  realPrice,
   rarity,
   isFavorited,
 }): React.JSX.Element => {
+  const navigation = useNavigation<NavigationProp>();
+
   const {colors, locations} = getBackgroundGradient(rarity);
 
   return (
-    <LinearGradient
-      colors={colors}
-      locations={locations}
-      start={{x: 0.5, y: 0}}
-      end={{x: 0.5, y: 1}}
-      style={styles.card}>
-      {/* Pattern overlay, above gradient but below content */}
+    <TouchableOpacity
+      style={[styles.card, {backgroundColor: getCardColor(rarity)}]}
+      activeOpacity={0.8}
+      onPress={() => {
+        navigation.navigate('Details');
+      }}>
+      <LinearGradient
+        colors={colors}
+        locations={locations}
+        start={{x: 0.5, y: 0}}
+        end={{x: 0.5, y: 1}}></LinearGradient>
+
       <ImageBackground
         source={pattern}
         resizeMode="cover"
         style={StyleSheet.absoluteFillObject}
-        imageStyle={{opacity: 0.5}} // Opcional: controla visibilidad
+        imageStyle={{opacity: 0.5}}
       />
 
-      {/* Rarity badge */}
       <View style={styles.cardTop}>
         <LinearGradient
           colors={getRarityBadgeGradient(rarity)}
           style={styles.badgeContainer}>
-          <Text category="label" style={{color: 'white'}}>
+          <Text category="label">
             {rarity.charAt(0).toUpperCase() + rarity.slice(1)}
           </Text>
         </LinearGradient>
 
-        <FavoriteIcon
-          isFavorited={isFavorited}
-          onPress={() => {
-            alert(name);
-          }}
-        />
+        <FavoriteIcon isFavorited={isFavorited} onPress={() => alert(name)} />
       </View>
 
       <View style={styles.imageContainer}>
@@ -113,7 +99,6 @@ const LootBoxCard: React.FC<LootboxProps> = ({
                 ? legendaryCrate
                 : null
             }
-            alt="lootbox"
             style={styles.image}
           />
         </ImageBackground>
@@ -122,7 +107,7 @@ const LootBoxCard: React.FC<LootboxProps> = ({
       <View style={styles.nameContainer}>
         <Text category="h5">{name}</Text>
       </View>
-    </LinearGradient>
+    </TouchableOpacity>
   );
 };
 
@@ -154,7 +139,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     width: '100%',
-    height: '68%', // aumentado
+    height: '68%',
   },
   glowBackground: {
     width: '100%',
@@ -183,9 +168,5 @@ const styles = StyleSheet.create({
     height: '20%',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  icon: {
-    width: 26,
-    height: 26,
   },
 });

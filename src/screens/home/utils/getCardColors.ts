@@ -25,29 +25,29 @@ export const getBackgroundGradient = (rarity: Rarity) => {
   switch (rarity) {
     case 'common':
       startColor = '#2e2f3f';
-      endColor = '#1a1b29'; // más oscuro que startColor
+      endColor = '#2e2f3f'; // más oscuro pero similar
       break;
     case 'rare':
       startColor = '#18385d';
-      endColor = '#0d1f32';
+      endColor = '#102640'; // tono más profundo del azul
       break;
     case 'epic':
       startColor = '#542d59';
-      endColor = '#2a1530';
+      endColor = '#3b1f3d'; // más oscuro, misma gama
       break;
     case 'legendary':
       startColor = '#6a4d1f';
-      endColor = '#3b2a0f';
+      endColor = '#4a3615'; // más apagado y oscuro
       break;
     default:
       startColor = '#5f4b05';
-      endColor = '#2f2502';
+      endColor = '#3f3203'; // más oscuro, mismo tono
   }
 
   const {colors, locations} = easeGradient({
     colorStops: {
       0: {color: startColor},
-      0.6: {color: startColor},
+      0.3: {color: startColor},
       1: {color: endColor},
     },
     easing: Easing.bezier(0.42, 0, 0.58, 1),
@@ -55,4 +55,19 @@ export const getBackgroundGradient = (rarity: Rarity) => {
   });
 
   return {colors, locations};
+};
+
+export const getCardColor = (rarity: Rarity): string => {
+  switch (rarity) {
+    case 'common':
+      return '#2e2f3f'; // se mantiene
+    case 'rare':
+      return '#112949'; // más oscuro que #18385d
+    case 'epic':
+      return '#3e2142'; // más oscuro que #542d59
+    case 'legendary':
+      return '#4f3a17'; // más oscuro que #6a4d1f
+    default:
+      return '#2e2f3f';
+  }
 };

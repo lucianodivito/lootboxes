@@ -19,14 +19,17 @@ import LootBoxCard from './components/LootBoxCard';
 import UserHeader from './components/UserHeader';
 
 // Data
-import lootboxes from '../../data/lootboxes.json';
+import rawLootboxes from '../../data/lootboxes.json';
 
 // Data type
 import {LootboxProps} from './components/LootBoxCard';
 
-const Home: React.FC = () => {
+const lootboxes = rawLootboxes as LootboxProps[];
+
+const Home: React.FC = (): React.JSX.Element => {
   const renderItem: ListRenderItem<LootboxProps> = ({item}) => (
     <LootBoxCard
+      id={item.id}
       name={item.name}
       tokensPrice={item.tokensPrice}
       realPrice={item.realPrice}
@@ -70,10 +73,10 @@ const styles = StyleSheet.create({
   },
   header: {
     width: '100%',
-    marginBottom: 4, // Reducción del espacio entre "All boxes" y el contenido
+    marginBottom: 4,
   },
   headerText: {
-    marginTop: 5, // Menos espacio entre "All boxes" y el UserHeader
+    marginTop: 5,
     marginHorizontal: 3,
   },
 });

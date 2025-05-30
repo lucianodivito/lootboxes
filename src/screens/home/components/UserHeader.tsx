@@ -4,28 +4,35 @@ import {Layout, Text, Icon, Button} from '@ui-kitten/components';
 import Avatar from './Avatar';
 import {creditsToDollars} from '../../../utils/moneyConversion';
 
+import user from '../../../data/user.json';
+
 const UserHeader: React.FC = (): React.JSX.Element => {
-  const userName = 'Totti Petrelli';
-  const userCredits = 432;
+  const {name, lastName, credits} = user;
 
   return (
     <Layout level="2" style={styles.container}>
       <View style={styles.leftContainer}>
-        <Avatar name="Totti" surname="Petrelli" />
+        <Avatar name={name} surname={lastName} />
         <View style={styles.textContainer}>
           <View style={styles.rowName}>
-            <Text category="h6" style={styles.name}>
-              {userName}
+            <Text
+              category="h6"
+              style={styles.name}
+              testID="UserHeader-completeName">
+              {name} {lastName}
             </Text>
             {/* <Icon name="checkmark-circle-outline" style={styles.premiumIcon} /> */}
           </View>
 
           <View style={styles.creditsContainer}>
-            <Text category="p1" style={styles.credits}>
-              {userCredits} credits
+            <Text
+              category="p1"
+              style={styles.credits}
+              testID="UserHeader-credits">
+              {credits} credits
             </Text>
             <Text category="p1" appearance="hint">
-              (${creditsToDollars(userCredits)})
+              (${creditsToDollars(credits)})
             </Text>
           </View>
         </View>
@@ -96,7 +103,6 @@ const styles = StyleSheet.create({
     tintColor: '#a2ff9f',
   },
   button: {
-    // width: '30%',
     borderRadius: 25,
   },
 });
