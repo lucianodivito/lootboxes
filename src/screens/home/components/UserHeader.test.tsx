@@ -15,8 +15,10 @@ describe('UserHeader', () => {
       </AppProviders>,
     );
 
-    const nameText = getByTestId('UserHeader-completeName');
+    const nameTextElement = getByTestId('UserHeader-completeName');
+    const {children} = nameTextElement.props;
+    const completeName = children.join('');
 
-    expect(nameText.props.children.join('')).toBe('Mx Tr');
+    expect(completeName).toBe('Luciano Di Vito');
   });
 });

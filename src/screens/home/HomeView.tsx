@@ -15,14 +15,14 @@ import {
   Text,
 } from '@ui-kitten/components';
 import MainContainer from '../../components/MainContainer';
-import LootBoxCard from './components/LootBoxCard';
+import LootBoxCard from './components/lootboxCard/LootBoxCard';
 import UserHeader from './components/UserHeader';
 
 // Data
 import rawLootboxes from '../../data/lootboxes.json';
 
 // Data type
-import {LootboxProps} from './components/LootBoxCard';
+import {LootboxProps} from './components/lootboxCard/LootBoxCard';
 
 const lootboxes = rawLootboxes as LootboxProps[];
 
@@ -35,6 +35,7 @@ const Home: React.FC = (): React.JSX.Element => {
       realPrice={item.realPrice}
       rarity={item.rarity}
       isFavorited={item.isFavorited}
+      prizes={item.prizes}
     />
   );
 

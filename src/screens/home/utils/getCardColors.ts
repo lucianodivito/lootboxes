@@ -24,24 +24,24 @@ export const getBackgroundGradient = (rarity: Rarity) => {
 
   switch (rarity) {
     case 'common':
-      startColor = '#2e2f3f';
-      endColor = '#2e2f3f'; // más oscuro pero similar
+      startColor = '#2c2c3a'; // gris oscuro con tono azulado
+      endColor = '#1a1a25'; // casi negro, con azul
       break;
     case 'rare':
-      startColor = '#18385d';
-      endColor = '#102640'; // tono más profundo del azul
+      startColor = '#1e3a5f'; // azul oscuro frío
+      endColor = '#121e30'; // azul marino profundo
       break;
     case 'epic':
-      startColor = '#542d59';
-      endColor = '#3b1f3d'; // más oscuro, misma gama
+      startColor = '#3c2342'; // violeta oscuro con gris
+      endColor = '#211428'; // púrpura profundo
       break;
     case 'legendary':
-      startColor = '#6a4d1f';
-      endColor = '#4a3615'; // más apagado y oscuro
+      startColor = '#4d3714'; // marrón oscuro dorado
+      endColor = '#2c1f0c'; // marrón casi negro
       break;
     default:
-      startColor = '#5f4b05';
-      endColor = '#3f3203'; // más oscuro, mismo tono
+      startColor = '#3e2c0a'; // dorado quemado
+      endColor = '#1e1606'; // sombra cálida
   }
 
   const {colors, locations} = easeGradient({

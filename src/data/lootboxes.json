@@ -5,7 +5,8 @@
     "tokensPrice": 100,
     "realPrice": 0.99,
     "rarity": "common",
-    "isFavorited": true
+    "isFavorited": true,
+    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "tokensPrice": 100,
     "realPrice": 0.99,
     "rarity": "common",
-    "isFavorited": true
+    "isFavorited": true,
+    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "tokensPrice": 250,
     "realPrice": 1.99,
     "rarity": "rare",
-    "isFavorited": false
+    "isFavorited": false,
+    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "tokensPrice": 250,
     "realPrice": 1.99,
     "rarity": "rare",
-    "isFavorited": false
+    "isFavorited": false,
+    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "tokensPrice": 500,
     "realPrice": 4.99,
     "rarity": "epic",
-    "isFavorited": false
+    "isFavorited": false,
+    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "tokensPrice": 500,
     "realPrice": 4.99,
     "rarity": "epic",
-    "isFavorited": false
+    "isFavorited": false,
+    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "tokensPrice": 1000,
     "realPrice": 9.99,
     "rarity": "legendary",
-    "isFavorited": false
+    "isFavorited": false,
+    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
   },
   {
     "id": 8,
@@ -61,6 +68,7 @@
     "tokensPrice": 1000,
     "realPrice": 9.99,
     "rarity": "legendary",
-    "isFavorited": false
+    "isFavorited": false,
+    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
   }
 ]

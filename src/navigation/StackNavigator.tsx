@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import Home from '../screens/home/Home';
+import Home from '../screens/home/HomeView';
 import CratesDetails from '../screens/cratesDetails/CratesDetails';
 
 export type RootStackParamList = {
