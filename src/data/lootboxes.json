@@ -9,49 +9,67 @@
     "isFavorited": true,
     "prizes": [
       {
-        "name": "Item 1",
-        "probability": 0.25,
-        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+        "name": "Apple sticker",
+        "rarity": "common",
+        "probability": 28,
+        "marketPrice": 1,
+        "image": "https://mystickermania.com/cdn/stickers/92.png"
       },
       {
-        "name": "Item 2",
-        "probability": 0.2,
-        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+        "name": "Apple Gift Card",
+        "rarity": "common",
+        "probability": 20,
+        "marketPrice": 10,
+        "image": "https://cdn.startselect.com/production/products/images/6ae3b/65177/289874652.png"
       },
       {
-        "name": "Item 3",
-        "probability": 0.15,
-        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+        "name": "Case",
+        "rarity": "rare",
+        "probability": 15,
+        "marketPrice": 20,
+        "image": "https://www.myepico.com/wp-content/uploads/2021/02/EPI-PH-C37-813-BLU-02.png"
       },
       {
-        "name": "Item 4",
-        "probability": 0.1,
-        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+        "name": "Earphones",
+        "rarity": "rare",
+        "probability": 12,
+        "marketPrice": 30,
+        "image": "https://www.macstation.com.ar/web/image/product.template/91388/image_1024?unique=f22b3fe"
       },
       {
-        "name": "Item 5",
-        "probability": 0.08,
-        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+        "name": "Airtag",
+        "rarity": "epic",
+        "probability": 8,
+        "marketPrice": 39,
+        "image": "https://www.macstation.com.ar/web/image/product.template/9393/image_1024?unique=2b29ab1"
       },
       {
-        "name": "Item 6",
-        "probability": 0.07,
-        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+        "name": "Homepod Mini",
+        "rarity": "epic",
+        "probability": 6,
+        "marketPrice": 99,
+        "image": "https://swedishmatch.cdn.storm.io/ab31bb59-f8b7-47a1-a937-80b714510582.png?w=500"
       },
       {
-        "name": "Item 7",
-        "probability": 0.05,
-        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+        "name": "Apple TV",
+        "rarity": "epic",
+        "probability": 5,
+        "marketPrice": 129,
+        "image": "https://www.macstation.com.ar/web/image/product.image/2412/image_1024/Apple%20TV%204K%20Wi-Fi%C2%A064GB%20%282022%29?unique=03118f9"
       },
       {
-        "name": "Item 8",
-        "probability": 0.05,
-        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+        "name": "iPhone 13",
+        "rarity": "legendary",
+        "probability": 4,
+        "marketPrice": 699,
+        "image": "https://waiphone.com/wp-content/uploads/2021/09/iphone-13-medianoche.png"
       },
       {
-        "name": "Item 9",
-        "probability": 0.05,
-        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+        "name": "MacBook Pro M1",
+        "rarity": "legendary",
+        "probability": 2,
+        "marketPrice": 1299,
+        "image": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111901_mbp16-gray.png"
       }
     ]
   },
@@ -64,15 +82,69 @@
     "rarity": "common",
     "isFavorited": true,
     "prizes": [
-      {"name": "Item 1", "probability": 0.25, "image": "item1.png"},
-      {"name": "Item 2", "probability": 0.2, "image": "item2.png"},
-      {"name": "Item 3", "probability": 0.15, "image": "item3.png"},
-      {"name": "Item 4", "probability": 0.1, "image": "item4.png"},
-      {"name": "Item 5", "probability": 0.08, "image": "item5.png"},
-      {"name": "Item 6", "probability": 0.07, "image": "item6.png"},
-      {"name": "Item 7", "probability": 0.05, "image": "item7.png"},
-      {"name": "Item 8", "probability": 0.05, "image": "item8.png"},
-      {"name": "Item 9", "probability": 0.05, "image": "item9.png"}
+      {
+        "name": "Apple sticker",
+        "rarity": "common",
+        "probability": 28,
+        "marketPrice": 1,
+        "image": "https://mystickermania.com/cdn/stickers/92.png"
+      },
+      {
+        "name": "Apple Gift Card",
+        "rarity": "common",
+        "probability": 20,
+        "marketPrice": 10,
+        "image": "https://cdn.startselect.com/production/products/images/6ae3b/65177/289874652.png"
+      },
+      {
+        "name": "Case",
+        "rarity": "rare",
+        "probability": 15,
+        "marketPrice": 20,
+        "image": "https://www.myepico.com/wp-content/uploads/2021/02/EPI-PH-C37-813-BLU-02.png"
+      },
+      {
+        "name": "Earphones",
+        "rarity": "rare",
+        "probability": 12,
+        "marketPrice": 30,
+        "image": "https://www.macstation.com.ar/web/image/product.template/91388/image_1024?unique=f22b3fe"
+      },
+      {
+        "name": "Airtag",
+        "rarity": "epic",
+        "probability": 8,
+        "marketPrice": 39,
+        "image": "https://www.macstation.com.ar/web/image/product.template/9393/image_1024?unique=2b29ab1"
+      },
+      {
+        "name": "Homepod Mini",
+        "rarity": "epic",
+        "probability": 6,
+        "marketPrice": 99,
+        "image": "https://swedishmatch.cdn.storm.io/ab31bb59-f8b7-47a1-a937-80b714510582.png?w=500"
+      },
+      {
+        "name": "Apple TV",
+        "rarity": "epic",
+        "probability": 5,
+        "marketPrice": 129,
+        "image": "https://www.macstation.com.ar/web/image/product.image/2412/image_1024/Apple%20TV%204K%20Wi-Fi%C2%A064GB%20%282022%29?unique=03118f9"
+      },
+      {
+        "name": "iPhone 13",
+        "rarity": "legendary",
+        "probability": 4,
+        "marketPrice": 699,
+        "image": "https://waiphone.com/wp-content/uploads/2021/09/iphone-13-medianoche.png"
+      },
+      {
+        "name": "MacBook Pro M1",
+        "rarity": "legendary",
+        "probability": 2,
+        "marketPrice": 1299,
+        "image": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111901_mbp16-gray.png"
+      }
     ]
   },
   {
@@ -84,15 +156,69 @@
     "rarity": "common",
     "isFavorited": false,
     "prizes": [
-      {"name": "Rare Item 1", "probability": 0.3, "image": "rare1.png"},
-      {"name": "Rare Item 2", "probability": 0.25, "image": "rare2.png"},
-      {"name": "Rare Item 3", "probability": 0.15, "image": "rare3.png"},
-      {"name": "Rare Item 4", "probability": 0.1, "image": "rare4.png"},
-      {"name": "Rare Item 5", "probability": 0.08, "image": "rare5.png"},
-      {"name": "Rare Item 6", "probability": 0.05, "image": "rare6.png"},
-      {"name": "Rare Item 7", "probability": 0.03, "image": "rare7.png"},
-      {"name": "Rare Item 8", "probability": 0.02, "image": "rare8.png"},
-      {"name": "Rare Item 9", "probability": 0.02, "image": "rare9.png"}
+      {
+        "name": "Apple sticker",
+        "rarity": "common",
+        "probability": 28,
+        "marketPrice": 1,
+        "image": "https://mystickermania.com/cdn/stickers/92.png"
+      },
+      {
+        "name": "Apple Gift Card",
+        "rarity": "common",
+        "probability": 20,
+        "marketPrice": 10,
+        "image": "https://cdn.startselect.com/production/products/images/6ae3b/65177/289874652.png"
+      },
+      {
+        "name": "Case",
+        "rarity": "rare",
+        "probability": 15,
+        "marketPrice": 20,
+        "image": "https://www.myepico.com/wp-content/uploads/2021/02/EPI-PH-C37-813-BLU-02.png"
+      },
+      {
+        "name": "Earphones",
+        "rarity": "rare",
+        "probability": 12,
+        "marketPrice": 30,
+        "image": "https://www.macstation.com.ar/web/image/product.template/91388/image_1024?unique=f22b3fe"
+      },
+      {
+        "name": "Airtag",
+        "rarity": "epic",
+        "probability": 8,
+        "marketPrice": 39,
+        "image": "https://www.macstation.com.ar/web/image/product.template/9393/image_1024?unique=2b29ab1"
+      },
+      {
+        "name": "Homepod Mini",
+        "rarity": "epic",
+        "probability": 6,
+        "marketPrice": 99,
+        "image": "https://swedishmatch.cdn.storm.io/ab31bb59-f8b7-47a1-a937-80b714510582.png?w=500"
+      },
+      {
+        "name": "Apple TV",
+        "rarity": "epic",
+        "probability": 5,
+        "marketPrice": 129,
+        "image": "https://www.macstation.com.ar/web/image/product.image/2412/image_1024/Apple%20TV%204K%20Wi-Fi%C2%A064GB%20%282022%29?unique=03118f9"
+      },
+      {
+        "name": "iPhone 13",
+        "rarity": "legendary",
+        "probability": 4,
+        "marketPrice": 699,
+        "image": "https://waiphone.com/wp-content/uploads/2021/09/iphone-13-medianoche.png"
+      },
+      {
+        "name": "MacBook Pro M1",
+        "rarity": "legendary",
+        "probability": 2,
+        "marketPrice": 1299,
+        "image": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111901_mbp16-gray.png"
+      }
     ]
   },
   {
@@ -104,15 +230,69 @@
     "rarity": "common",
     "isFavorited": false,
     "prizes": [
-      {"name": "Rare Item 1", "probability": 0.3, "image": "rare1.png"},
-      {"name": "Rare Item 2", "probability": 0.25, "image": "rare2.png"},
-      {"name": "Rare Item 3", "probability": 0.15, "image": "rare3.png"},
-      {"name": "Rare Item 4", "probability": 0.1, "image": "rare4.png"},
-      {"name": "Rare Item 5", "probability": 0.08, "image": "rare5.png"},
-      {"name": "Rare Item 6", "probability": 0.05, "image": "rare6.png"},
-      {"name": "Rare Item 7", "probability": 0.03, "image": "rare7.png"},
-      {"name": "Rare Item 8", "probability": 0.02, "image": "rare8.png"},
-      {"name": "Rare Item 9", "probability": 0.02, "image": "rare9.png"}
+      {
+        "name": "Apple sticker",
+        "rarity": "common",
+        "probability": 28,
+        "marketPrice": 1,
+        "image": "https://mystickermania.com/cdn/stickers/92.png"
+      },
+      {
+        "name": "Apple Gift Card",
+        "rarity": "common",
+        "probability": 20,
+        "marketPrice": 10,
+        "image": "https://cdn.startselect.com/production/products/images/6ae3b/65177/289874652.png"
+      },
+      {
+        "name": "Case",
+        "rarity": "rare",
+        "probability": 15,
+        "marketPrice": 20,
+        "image": "https://www.myepico.com/wp-content/uploads/2021/02/EPI-PH-C37-813-BLU-02.png"
+      },
+      {
+        "name": "Earphones",
+        "rarity": "rare",
+        "probability": 12,
+        "marketPrice": 30,
+        "image": "https://www.macstation.com.ar/web/image/product.template/91388/image_1024?unique=f22b3fe"
+      },
+      {
+        "name": "Airtag",
+        "rarity": "epic",
+        "probability": 8,
+        "marketPrice": 39,
+        "image": "https://www.macstation.com.ar/web/image/product.template/9393/image_1024?unique=2b29ab1"
+      },
+      {
+        "name": "Homepod Mini",
+        "rarity": "epic",
+        "probability": 6,
+        "marketPrice": 99,
+        "image": "https://swedishmatch.cdn.storm.io/ab31bb59-f8b7-47a1-a937-80b714510582.png?w=500"
+      },
+      {
+        "name": "Apple TV",
+        "rarity": "epic",
+        "probability": 5,
+        "marketPrice": 129,
+        "image": "https://www.macstation.com.ar/web/image/product.image/2412/image_1024/Apple%20TV%204K%20Wi-Fi%C2%A064GB%20%282022%29?unique=03118f9"
+      },
+      {
+        "name": "iPhone 13",
+        "rarity": "legendary",
+        "probability": 4,
+        "marketPrice": 699,
+        "image": "https://waiphone.com/wp-content/uploads/2021/09/iphone-13-medianoche.png"
+      },
+      {
+        "name": "MacBook Pro M1",
+        "rarity": "legendary",
+        "probability": 2,
+        "marketPrice": 1299,
+        "image": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111901_mbp16-gray.png"
+      }
     ]
   },
   {
@@ -124,15 +304,69 @@
     "rarity": "rare",
     "isFavorited": false,
     "prizes": [
-      {"name": "Epic Item 1", "probability": 0.3, "image": "epic1.png"},
-      {"name": "Epic Item 2", "probability": 0.2, "image": "epic2.png"},
-      {"name": "Epic Item 3", "probability": 0.15, "image": "epic3.png"},
-      {"name": "Epic Item 4", "probability": 0.1, "image": "epic4.png"},
-      {"name": "Epic Item 5", "probability": 0.08, "image": "epic5.png"},
-      {"name": "Epic Item 6", "probability": 0.06, "image": "epic6.png"},
-      {"name": "Epic Item 7", "probability": 0.04, "image": "epic7.png"},
-      {"name": "Epic Item 8", "probability": 0.04, "image": "epic8.png"},
-      {"name": "Epic Item 9", "probability": 0.03, "image": "epic9.png"}
+      {
+        "name": "Apple sticker",
+        "rarity": "common",
+        "probability": 28,
+        "marketPrice": 1,
+        "image": "https://mystickermania.com/cdn/stickers/92.png"
+      },
+      {
+        "name": "Apple Gift Card",
+        "rarity": "common",
+        "probability": 20,
+        "marketPrice": 10,
+        "image": "https://cdn.startselect.com/production/products/images/6ae3b/65177/289874652.png"
+      },
+      {
+        "name": "Case",
+        "rarity": "rare",
+        "probability": 15,
+        "marketPrice": 20,
+        "image": "https://www.myepico.com/wp-content/uploads/2021/02/EPI-PH-C37-813-BLU-02.png"
+      },
+      {
+        "name": "Earphones",
+        "rarity": "rare",
+        "probability": 12,
+        "marketPrice": 30,
+        "image": "https://www.macstation.com.ar/web/image/product.template/91388/image_1024?unique=f22b3fe"
+      },
+      {
+        "name": "Airtag",
+        "rarity": "epic",
+        "probability": 8,
+        "marketPrice": 39,
+        "image": "https://www.macstation.com.ar/web/image/product.template/9393/image_1024?unique=2b29ab1"
+      },
+      {
+        "name": "Homepod Mini",
+        "rarity": "epic",
+        "probability": 6,
+        "marketPrice": 99,
+        "image": "https://swedishmatch.cdn.storm.io/ab31bb59-f8b7-47a1-a937-80b714510582.png?w=500"
+      },
+      {
+        "name": "Apple TV",
+        "rarity": "epic",
+        "probability": 5,
+        "marketPrice": 129,
+        "image": "https://www.macstation.com.ar/web/image/product.image/2412/image_1024/Apple%20TV%204K%20Wi-Fi%C2%A064GB%20%282022%29?unique=03118f9"
+      },
+      {
+        "name": "iPhone 13",
+        "rarity": "legendary",
+        "probability": 4,
+        "marketPrice": 699,
+        "image": "https://waiphone.com/wp-content/uploads/2021/09/iphone-13-medianoche.png"
+      },
+      {
+        "name": "MacBook Pro M1",
+        "rarity": "legendary",
+        "probability": 2,
+        "marketPrice": 1299,
+        "image": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111901_mbp16-gray.png"
+      }
     ]
   },
   {
@@ -145,15 +379,69 @@
     "rarity": "rare",
     "isFavorited": false,
     "prizes": [
-      {"name": "Epic Item 1", "probability": 0.3, "image": "epic1.png"},
-      {"name": "Epic Item 2", "probability": 0.2, "image": "epic2.png"},
-      {"name": "Epic Item 3", "probability": 0.15, "image": "epic3.png"},
-      {"name": "Epic Item 4", "probability": 0.1, "image": "epic4.png"},
-      {"name": "Epic Item 5", "probability": 0.08, "image": "epic5.png"},
-      {"name": "Epic Item 6", "probability": 0.06, "image": "epic6.png"},
-      {"name": "Epic Item 7", "probability": 0.04, "image": "epic7.png"},
-      {"name": "Epic Item 8", "probability": 0.04, "image": "epic8.png"},
-      {"name": "Epic Item 9", "probability": 0.03, "image": "epic9.png"}
+      {
+        "name": "Apple sticker",
+        "rarity": "common",
+        "probability": 28,
+        "marketPrice": 1,
+        "image": "https://mystickermania.com/cdn/stickers/92.png"
+      },
+      {
+        "name": "Apple Gift Card",
+        "rarity": "common",
+        "probability": 20,
+        "marketPrice": 10,
+        "image": "https://cdn.startselect.com/production/products/images/6ae3b/65177/289874652.png"
+      },
+      {
+        "name": "Case",
+        "rarity": "rare",
+        "probability": 15,
+        "marketPrice": 20,
+        "image": "https://www.myepico.com/wp-content/uploads/2021/02/EPI-PH-C37-813-BLU-02.png"
+      },
+      {
+        "name": "Earphones",
+        "rarity": "rare",
+        "probability": 12,
+        "marketPrice": 30,
+        "image": "https://www.macstation.com.ar/web/image/product.template/91388/image_1024?unique=f22b3fe"
+      },
+      {
+        "name": "Airtag",
+        "rarity": "epic",
+        "probability": 8,
+        "marketPrice": 39,
+        "image": "https://www.macstation.com.ar/web/image/product.template/9393/image_1024?unique=2b29ab1"
+      },
+      {
+        "name": "Homepod Mini",
+        "rarity": "epic",
+        "probability": 6,
+        "marketPrice": 99,
+        "image": "https://swedishmatch.cdn.storm.io/ab31bb59-f8b7-47a1-a937-80b714510582.png?w=500"
+      },
+      {
+        "name": "Apple TV",
+        "rarity": "epic",
+        "probability": 5,
+        "marketPrice": 129,
+        "image": "https://www.macstation.com.ar/web/image/product.image/2412/image_1024/Apple%20TV%204K%20Wi-Fi%C2%A064GB%20%282022%29?unique=03118f9"
+      },
+      {
+        "name": "iPhone 13",
+        "rarity": "legendary",
+        "probability": 4,
+        "marketPrice": 699,
+        "image": "https://waiphone.com/wp-content/uploads/2021/09/iphone-13-medianoche.png"
+      },
+      {
+        "name": "MacBook Pro M1",
+        "rarity": "legendary",
+        "probability": 2,
+        "marketPrice": 1299,
+        "image": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111901_mbp16-gray.png"
+      }
     ]
   },
   {
@@ -166,49 +454,67 @@
     "isFavorited": false,
     "prizes": [
       {
-        "name": "Legendary Item 1",
-        "probability": 0.35,
-        "image": "legendary1.png"
+        "name": "Apple sticker",
+        "rarity": "common",
+        "probability": 28,
+        "marketPrice": 1,
+        "image": "https://mystickermania.com/cdn/stickers/92.png"
       },
       {
-        "name": "Legendary Item 2",
-        "probability": 0.2,
-        "image": "legendary2.png"
+        "name": "Apple Gift Card",
+        "rarity": "common",
+        "probability": 20,
+        "marketPrice": 10,
+        "image": "https://cdn.startselect.com/production/products/images/6ae3b/65177/289874652.png"
       },
       {
-        "name": "Legendary Item 3",
-        "probability": 0.15,
-        "image": "legendary3.png"
+        "name": "Case",
+        "rarity": "rare",
+        "probability": 15,
+        "marketPrice": 20,
+        "image": "https://www.myepico.com/wp-content/uploads/2021/02/EPI-PH-C37-813-BLU-02.png"
       },
       {
-        "name": "Legendary Item 4",
-        "probability": 0.1,
-        "image": "legendary4.png"
+        "name": "Earphones",
+        "rarity": "rare",
+        "probability": 12,
+        "marketPrice": 30,
+        "image": "https://www.macstation.com.ar/web/image/product.template/91388/image_1024?unique=f22b3fe"
       },
       {
-        "name": "Legendary Item 5",
-        "probability": 0.07,
-        "image": "legendary5.png"
+        "name": "Airtag",
+        "rarity": "epic",
+        "probability": 8,
+        "marketPrice": 39,
+        "image": "https://www.macstation.com.ar/web/image/product.template/9393/image_1024?unique=2b29ab1"
       },
       {
-        "name": "Legendary Item 6",
-        "probability": 0.05,
-        "image": "legendary6.png"
+        "name": "Homepod Mini",
+        "rarity": "epic",
+        "probability": 6,
+        "marketPrice": 99,
+        "image": "https://swedishmatch.cdn.storm.io/ab31bb59-f8b7-47a1-a937-80b714510582.png?w=500"
       },
       {
-        "name": "Legendary Item 7",
-        "probability": 0.03,
-        "image": "legendary7.png"
+        "name": "Apple TV",
+        "rarity": "epic",
+        "probability": 5,
+        "marketPrice": 129,
+        "image": "https://www.macstation.com.ar/web/image/product.image/2412/image_1024/Apple%20TV%204K%20Wi-Fi%C2%A064GB%20%282022%29?unique=03118f9"
       },
       {
-        "name": "Legendary Item 8",
-        "probability": 0.03,
-        "image": "legendary8.png"
+        "name": "iPhone 13",
+        "rarity": "legendary",
+        "probability": 4,
+        "marketPrice": 699,
+        "image": "https://waiphone.com/wp-content/uploads/2021/09/iphone-13-medianoche.png"
       },
       {
-        "name": "Legendary Item 9",
-        "probability": 0.02,
-        "image": "legendary9.png"
+        "name": "MacBook Pro M1",
+        "rarity": "legendary",
+        "probability": 2,
+        "marketPrice": 1299,
+        "image": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111901_mbp16-gray.png"
       }
     ]
   },
@@ -222,49 +528,67 @@
     "isFavorited": false,
     "prizes": [
       {
-        "name": "Legendary Item 1",
-        "probability": 0.35,
-        "image": "legendary1.png"
+        "name": "Apple sticker",
+        "rarity": "common",
+        "probability": 28,
+        "marketPrice": 1,
+        "image": "https://mystickermania.com/cdn/stickers/92.png"
       },
       {
-        "name": "Legendary Item 2",
-        "probability": 0.2,
-        "image": "legendary2.png"
+        "name": "Apple Gift Card",
+        "rarity": "common",
+        "probability": 20,
+        "marketPrice": 10,
+        "image": "https://cdn.startselect.com/production/products/images/6ae3b/65177/289874652.png"
       },
       {
-        "name": "Legendary Item 3",
-        "probability": 0.15,
-        "image": "legendary3.png"
+        "name": "Case",
+        "rarity": "rare",
+        "probability": 15,
+        "marketPrice": 20,
+        "image": "https://www.myepico.com/wp-content/uploads/2021/02/EPI-PH-C37-813-BLU-02.png"
       },
       {
-        "name": "Legendary Item 4",
-        "probability": 0.1,
-        "image": "legendary4.png"
+        "name": "Earphones",
+        "rarity": "rare",
+        "probability": 12,
+        "marketPrice": 30,
+        "image": "https://www.macstation.com.ar/web/image/product.template/91388/image_1024?unique=f22b3fe"
       },
       {
-        "name": "Legendary Item 5",
-        "probability": 0.07,
-        "image": "legendary5.png"
+        "name": "Airtag",
+        "rarity": "epic",
+        "probability": 8,
+        "marketPrice": 39,
+        "image": "https://www.macstation.com.ar/web/image/product.template/9393/image_1024?unique=2b29ab1"
       },
       {
-        "name": "Legendary Item 6",
-        "probability": 0.05,
-        "image": "legendary6.png"
+        "name": "Homepod Mini",
+        "rarity": "epic",
+        "probability": 6,
+        "marketPrice": 99,
+        "image": "https://swedishmatch.cdn.storm.io/ab31bb59-f8b7-47a1-a937-80b714510582.png?w=500"
       },
       {
-        "name": "Legendary Item 7",
-        "probability": 0.03,
-        "image": "legendary7.png"
+        "name": "Apple TV",
+        "rarity": "epic",
+        "probability": 5,
+        "marketPrice": 129,
+        "image": "https://www.macstation.com.ar/web/image/product.image/2412/image_1024/Apple%20TV%204K%20Wi-Fi%C2%A064GB%20%282022%29?unique=03118f9"
       },
       {
-        "name": "Legendary Item 8",
-        "probability": 0.03,
-        "image": "legendary8.png"
+        "name": "iPhone 13",
+        "rarity": "legendary",
+        "probability": 4,
+        "marketPrice": 699,
+        "image": "https://waiphone.com/wp-content/uploads/2021/09/iphone-13-medianoche.png"
       },
       {
-        "name": "Legendary Item 9",
-        "probability": 0.02,
-        "image": "legendary9.png"
+        "name": "MacBook Pro M1",
+        "rarity": "legendary",
+        "probability": 2,
+        "marketPrice": 1299,
+        "image": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111901_mbp16-gray.png"
       }
     ]
   },
@@ -278,49 +602,67 @@
     "isFavorited": false,
     "prizes": [
       {
-        "name": "Legendary Item 1",
-        "probability": 0.35,
-        "image": "legendary1.png"
+        "name": "Apple sticker",
+        "rarity": "common",
+        "probability": 28,
+        "marketPrice": 1,
+        "image": "https://mystickermania.com/cdn/stickers/92.png"
       },
       {
-        "name": "Legendary Item 2",
-        "probability": 0.2,
-        "image": "legendary2.png"
+        "name": "Apple Gift Card",
+        "rarity": "common",
+        "probability": 20,
+        "marketPrice": 10,
+        "image": "https://cdn.startselect.com/production/products/images/6ae3b/65177/289874652.png"
       },
       {
-        "name": "Legendary Item 3",
-        "probability": 0.15,
-        "image": "legendary3.png"
+        "name": "Case",
+        "rarity": "rare",
+        "probability": 15,
+        "marketPrice": 20,
+        "image": "https://www.myepico.com/wp-content/uploads/2021/02/EPI-PH-C37-813-BLU-02.png"
       },
       {
-        "name": "Legendary Item 4",
-        "probability": 0.1,
-        "image": "legendary4.png"
+        "name": "Earphones",
+        "rarity": "rare",
+        "probability": 12,
+        "marketPrice": 30,
+        "image": "https://www.macstation.com.ar/web/image/product.template/91388/image_1024?unique=f22b3fe"
       },
       {
-        "name": "Legendary Item 5",
-        "probability": 0.07,
-        "image": "legendary5.png"
+        "name": "Airtag",
+        "rarity": "epic",
+        "probability": 8,
+        "marketPrice": 39,
+        "image": "https://www.macstation.com.ar/web/image/product.template/9393/image_1024?unique=2b29ab1"
       },
       {
-        "name": "Legendary Item 6",
-        "probability": 0.05,
-        "image": "legendary6.png"
+        "name": "Homepod Mini",
+        "rarity": "epic",
+        "probability": 6,
+        "marketPrice": 99,
+        "image": "https://swedishmatch.cdn.storm.io/ab31bb59-f8b7-47a1-a937-80b714510582.png?w=500"
       },
       {
-        "name": "Legendary Item 7",
-        "probability": 0.03,
-        "image": "legendary7.png"
+        "name": "Apple TV",
+        "rarity": "epic",
+        "probability": 5,
+        "marketPrice": 129,
+        "image": "https://www.macstation.com.ar/web/image/product.image/2412/image_1024/Apple%20TV%204K%20Wi-Fi%C2%A064GB%20%282022%29?unique=03118f9"
       },
       {
-        "name": "Legendary Item 8",
-        "probability": 0.03,
-        "image": "legendary8.png"
+        "name": "iPhone 13",
+        "rarity": "legendary",
+        "probability": 4,
+        "marketPrice": 699,
+        "image": "https://waiphone.com/wp-content/uploads/2021/09/iphone-13-medianoche.png"
       },
       {
-        "name": "Legendary Item 9",
-        "probability": 0.02,
-        "image": "legendary9.png"
+        "name": "MacBook Pro M1",
+        "rarity": "legendary",
+        "probability": 2,
+        "marketPrice": 1299,
+        "image": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111901_mbp16-gray.png"
       }
     ]
   },
@@ -333,15 +675,69 @@
     "rarity": "legendary",
     "isFavorited": false,
     "prizes": [
-      {"name": "Rare Item 1", "probability": 0.3, "image": "rare1.png"},
-      {"name": "Rare Item 2", "probability": 0.25, "image": "rare2.png"},
-      {"name": "Rare Item 3", "probability": 0.15, "image": "rare3.png"},
-      {"name": "Rare Item 4", "probability": 0.1, "image": "rare4.png"},
-      {"name": "Rare Item 5", "probability": 0.08, "image": "rare5.png"},
-      {"name": "Rare Item 6", "probability": 0.05, "image": "rare6.png"},
-      {"name": "Rare Item 7", "probability": 0.03, "image": "rare7.png"},
-      {"name": "Rare Item 8", "probability": 0.02, "image": "rare8.png"},
-      {"name": "Rare Item 9", "probability": 0.02, "image": "rare9.png"}
+      {
+        "name": "Apple sticker",
+        "rarity": "common",
+        "probability": 28,
+        "marketPrice": 1,
+        "image": "https://mystickermania.com/cdn/stickers/92.png"
+      },
+      {
+        "name": "Apple Gift Card",
+        "rarity": "common",
+        "probability": 20,
+        "marketPrice": 10,
+        "image": "https://cdn.startselect.com/production/products/images/6ae3b/65177/289874652.png"
+      },
+      {
+        "name": "Case",
+        "rarity": "rare",
+        "probability": 15,
+        "marketPrice": 20,
+        "image": "https://www.myepico.com/wp-content/uploads/2021/02/EPI-PH-C37-813-BLU-02.png"
+      },
+      {
+        "name": "Earphones",
+        "rarity": "rare",
+        "probability": 12,
+        "marketPrice": 30,
+        "image": "https://www.macstation.com.ar/web/image/product.template/91388/image_1024?unique=f22b3fe"
+      },
+      {
+        "name": "Airtag",
+        "rarity": "epic",
+        "probability": 8,
+        "marketPrice": 39,
+        "image": "https://www.macstation.com.ar/web/image/product.template/9393/image_1024?unique=2b29ab1"
+      },
+      {
+        "name": "Homepod Mini",
+        "rarity": "epic",
+        "probability": 6,
+        "marketPrice": 99,
+        "image": "https://swedishmatch.cdn.storm.io/ab31bb59-f8b7-47a1-a937-80b714510582.png?w=500"
+      },
+      {
+        "name": "Apple TV",
+        "rarity": "epic",
+        "probability": 5,
+        "marketPrice": 129,
+        "image": "https://www.macstation.com.ar/web/image/product.image/2412/image_1024/Apple%20TV%204K%20Wi-Fi%C2%A064GB%20%282022%29?unique=03118f9"
+      },
+      {
+        "name": "iPhone 13",
+        "rarity": "legendary",
+        "probability": 4,
+        "marketPrice": 699,
+        "image": "https://waiphone.com/wp-content/uploads/2021/09/iphone-13-medianoche.png"
+      },
+      {
+        "name": "MacBook Pro M1",
+        "rarity": "legendary",
+        "probability": 2,
+        "marketPrice": 1299,
+        "image": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111901_mbp16-gray.png"
+      }
     ]
   }
 ]

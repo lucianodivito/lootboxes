@@ -2,10 +2,13 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../screens/home/HomeView';
 import CratesDetails from '../screens/cratesDetails/CratesDetails';
+import {Prize} from '../screens/home/components/lootboxCard/LootBoxCard';
+
+type DetailsParams = {prizes: Prize[]};
 
 export type RootStackParamList = {
   Home: undefined;
-  Details: undefined;
+  Details: DetailsParams;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
