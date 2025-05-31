@@ -6,6 +6,7 @@ import {
   ImageBackground,
   Image,
   TouchableOpacity,
+  ImageSourcePropType,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import FlipCard from 'react-native-flip-card';
@@ -14,14 +15,20 @@ import FavoriteIcon from '../FavoriteIcon';
 
 import glowingGray from '../../../../../assets/glowings/glow-gray.png';
 
-import commonCrate from '../../../../../assets/crates/commonCrate.png';
-import rareCrate from '../../../../../assets/crates/rareCrate.png';
-import epicCrate from '../../../../../assets/crates/epicCrate.png';
-import legendaryCrate from '../../../../../assets/crates/legendaryCrate.png';
-
 import pattern from '../../../../../assets/patterns/pattern.png';
 
 import HomeViewModel from '../../HomeViewModel';
+
+import apple from '../../../../../assets/crates/apple.png';
+import nintendo from '../../../../../assets/crates/nintendo.png';
+import playstation from '../../../../../assets/crates/playstation.png';
+import pcgaming from '../../../../../assets/crates/pcgaming.png';
+import xbox from '../../../../../assets/crates/xbox.png';
+import apple2 from '../../../../../assets/crates/apple2.png';
+import nintendo2 from '../../../../../assets/crates/nintendo2.png';
+import supreme from '../../../../../assets/crates/supreme.png';
+import jordan from '../../../../../assets/crates/supreme.png';
+import rolex from '../../../../../assets/crates/rolex.png';
 
 import {
   getRarityBadgeGradient,
@@ -29,14 +36,36 @@ import {
   getCardColor,
 } from '../../utils/getCardColors';
 
+type CrateImageName = keyof typeof crateImages;
+
+const crateImages = {
+  apple,
+  nintendo,
+  playstation,
+  pcgaming,
+  xbox,
+  apple2,
+  nintendo2,
+  supreme,
+  jordan,
+  rolex,
+};
+
+type Prize = {
+  name: string;
+  probability: number;
+  image: string;
+};
+
 export type LootboxProps = {
   id: number;
   name: string;
+  imageName: CrateImageName;
   tokensPrice: number;
   realPrice: number;
   rarity: 'common' | 'rare' | 'epic' | 'legendary';
   isFavorited: Boolean;
-  prizes: Number[];
+  prizes: Prize[];
 };
 
 const LootBoxCard: React.FC<LootboxProps> = ({
@@ -44,9 +73,8 @@ const LootBoxCard: React.FC<LootboxProps> = ({
   rarity,
   isFavorited,
   prizes,
+  imageName,
 }): React.JSX.Element => {
-  const {handleCrateNativegate} = HomeViewModel();
-
   const {colors, locations} = getBackgroundGradient(rarity);
 
   return (
@@ -94,20 +122,7 @@ const LootBoxCard: React.FC<LootboxProps> = ({
               source={glowingGray}
               style={styles.glowBackground}
               imageStyle={styles.glowImage}>
-              <Image
-                source={
-                  rarity === 'common'
-                    ? commonCrate
-                    : rarity === 'rare'
-                    ? rareCrate
-                    : rarity === 'epic'
-                    ? epicCrate
-                    : rarity === 'legendary'
-                    ? legendaryCrate
-                    : null
-                }
-                style={styles.image}
-              />
+              <Image source={crateImages[imageName]} style={styles.image} />
             </ImageBackground>
           </View>
 
@@ -133,14 +148,17 @@ const LootBoxCard: React.FC<LootboxProps> = ({
 
           <View style={styles.prizesContainer}>
             {prizes.map((prize, index) => (
-              <View key={index.toString()} style={styles.prizeBox}>
-                <Text>{prize}</Text>
+              <View
+                key={index.toString()}
+                style={[
+                  styles.prizeBox,
+                  {backgroundColor: getCardColor(rarity)},
+                ]}>
+                <Image source={{uri: prize.image}} style={styles.prizeImage} />
               </View>
             ))}
           </View>
-          <Button appearance="outline" style={styles.buttonOpen}>
-            Open
-          </Button>
+          <Button style={styles.buttonOpen}>Open</Button>
         </View>
       </FlipCard>
     </View>
@@ -195,6 +213,8 @@ const styles = StyleSheet.create({
     bottom: 0,
     borderRadius: 10,
     zIndex: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   glowImage: {
     borderRadius: 10,
@@ -202,8 +222,8 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   image: {
-    width: '100%',
-    height: '100%',
+    width: '90%',
+    height: '90%',
     resizeMode: 'contain',
     zIndex: 1,
   },
@@ -222,8 +242,8 @@ const styles = StyleSheet.create({
 
   prizeBox: {
     width: '30%',
-    aspectRatio: 1, // asegura forma cuadrada
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    aspectRatio: 1,
+    // backgroundColor: 'rgba(255, 255, 255, 0.2)',
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
@@ -234,6 +254,11 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 14,
     textAlign: 'center',
+  },
+  prizeImage: {
+    width: 40,
+    height: 40,
+    resizeMode: 'contain',
   },
   buttonOpen: {
     borderRadius: 50,

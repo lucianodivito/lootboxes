@@ -1,19 +1,6 @@
 import React from 'react';
-import {
-  StyleSheet,
-  FlatList,
-  ListRenderItem,
-  View,
-  Dimensions,
-} from 'react-native';
-import {
-  ApplicationProvider,
-  Button,
-  Icon,
-  IconRegistry,
-  Layout,
-  Text,
-} from '@ui-kitten/components';
+import {StyleSheet, FlatList, ListRenderItem} from 'react-native';
+import {Text} from '@ui-kitten/components';
 import MainContainer from '../../components/MainContainer';
 import LootBoxCard from './components/lootboxCard/LootBoxCard';
 import UserHeader from './components/UserHeader';
@@ -31,6 +18,7 @@ const Home: React.FC = (): React.JSX.Element => {
     <LootBoxCard
       id={item.id}
       name={item.name}
+      imageName={item.imageName}
       tokensPrice={item.tokensPrice}
       realPrice={item.realPrice}
       rarity={item.rarity}

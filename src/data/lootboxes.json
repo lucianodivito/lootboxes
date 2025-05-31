@@ -1,74 +1,347 @@
 [
   {
     "id": 1,
-    "name": "Crate 1",
+    "name": "Apple",
+    "imageName": "apple",
     "tokensPrice": 100,
     "realPrice": 0.99,
     "rarity": "common",
     "isFavorited": true,
-    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    "prizes": [
+      {
+        "name": "Item 1",
+        "probability": 0.25,
+        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+      },
+      {
+        "name": "Item 2",
+        "probability": 0.2,
+        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+      },
+      {
+        "name": "Item 3",
+        "probability": 0.15,
+        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+      },
+      {
+        "name": "Item 4",
+        "probability": 0.1,
+        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+      },
+      {
+        "name": "Item 5",
+        "probability": 0.08,
+        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+      },
+      {
+        "name": "Item 6",
+        "probability": 0.07,
+        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+      },
+      {
+        "name": "Item 7",
+        "probability": 0.05,
+        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+      },
+      {
+        "name": "Item 8",
+        "probability": 0.05,
+        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+      },
+      {
+        "name": "Item 9",
+        "probability": 0.05,
+        "image": "https://www.pngkey.com/png/full/0-5222_google-play-gift-cards-google-play-gift-card.png"
+      }
+    ]
   },
   {
     "id": 2,
-    "name": "Crate 2",
+    "name": "Nintendo",
+    "imageName": "nintendo",
     "tokensPrice": 100,
     "realPrice": 0.99,
     "rarity": "common",
     "isFavorited": true,
-    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    "prizes": [
+      {"name": "Item 1", "probability": 0.25, "image": "item1.png"},
+      {"name": "Item 2", "probability": 0.2, "image": "item2.png"},
+      {"name": "Item 3", "probability": 0.15, "image": "item3.png"},
+      {"name": "Item 4", "probability": 0.1, "image": "item4.png"},
+      {"name": "Item 5", "probability": 0.08, "image": "item5.png"},
+      {"name": "Item 6", "probability": 0.07, "image": "item6.png"},
+      {"name": "Item 7", "probability": 0.05, "image": "item7.png"},
+      {"name": "Item 8", "probability": 0.05, "image": "item8.png"},
+      {"name": "Item 9", "probability": 0.05, "image": "item9.png"}
+    ]
   },
   {
     "id": 3,
-    "name": "Crate 3",
+    "name": "PlayStation",
+    "imageName": "playstation",
     "tokensPrice": 250,
     "realPrice": 1.99,
-    "rarity": "rare",
+    "rarity": "common",
     "isFavorited": false,
-    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    "prizes": [
+      {"name": "Rare Item 1", "probability": 0.3, "image": "rare1.png"},
+      {"name": "Rare Item 2", "probability": 0.25, "image": "rare2.png"},
+      {"name": "Rare Item 3", "probability": 0.15, "image": "rare3.png"},
+      {"name": "Rare Item 4", "probability": 0.1, "image": "rare4.png"},
+      {"name": "Rare Item 5", "probability": 0.08, "image": "rare5.png"},
+      {"name": "Rare Item 6", "probability": 0.05, "image": "rare6.png"},
+      {"name": "Rare Item 7", "probability": 0.03, "image": "rare7.png"},
+      {"name": "Rare Item 8", "probability": 0.02, "image": "rare8.png"},
+      {"name": "Rare Item 9", "probability": 0.02, "image": "rare9.png"}
+    ]
   },
   {
     "id": 4,
-    "name": "Crate 4",
+    "name": "XBox",
+    "imageName": "xbox",
     "tokensPrice": 250,
     "realPrice": 1.99,
-    "rarity": "rare",
+    "rarity": "common",
     "isFavorited": false,
-    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    "prizes": [
+      {"name": "Rare Item 1", "probability": 0.3, "image": "rare1.png"},
+      {"name": "Rare Item 2", "probability": 0.25, "image": "rare2.png"},
+      {"name": "Rare Item 3", "probability": 0.15, "image": "rare3.png"},
+      {"name": "Rare Item 4", "probability": 0.1, "image": "rare4.png"},
+      {"name": "Rare Item 5", "probability": 0.08, "image": "rare5.png"},
+      {"name": "Rare Item 6", "probability": 0.05, "image": "rare6.png"},
+      {"name": "Rare Item 7", "probability": 0.03, "image": "rare7.png"},
+      {"name": "Rare Item 8", "probability": 0.02, "image": "rare8.png"},
+      {"name": "Rare Item 9", "probability": 0.02, "image": "rare9.png"}
+    ]
   },
   {
     "id": 5,
-    "name": "Crate 5",
+    "name": "Apple+",
+    "imageName": "apple2",
     "tokensPrice": 500,
     "realPrice": 4.99,
-    "rarity": "epic",
+    "rarity": "rare",
     "isFavorited": false,
-    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    "prizes": [
+      {"name": "Epic Item 1", "probability": 0.3, "image": "epic1.png"},
+      {"name": "Epic Item 2", "probability": 0.2, "image": "epic2.png"},
+      {"name": "Epic Item 3", "probability": 0.15, "image": "epic3.png"},
+      {"name": "Epic Item 4", "probability": 0.1, "image": "epic4.png"},
+      {"name": "Epic Item 5", "probability": 0.08, "image": "epic5.png"},
+      {"name": "Epic Item 6", "probability": 0.06, "image": "epic6.png"},
+      {"name": "Epic Item 7", "probability": 0.04, "image": "epic7.png"},
+      {"name": "Epic Item 8", "probability": 0.04, "image": "epic8.png"},
+      {"name": "Epic Item 9", "probability": 0.03, "image": "epic9.png"}
+    ]
   },
   {
     "id": 6,
-    "name": "Crate 6",
+    "name": "Nintendo+",
+    "imageName": "nintendo2",
+
     "tokensPrice": 500,
     "realPrice": 4.99,
-    "rarity": "epic",
+    "rarity": "rare",
     "isFavorited": false,
-    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    "prizes": [
+      {"name": "Epic Item 1", "probability": 0.3, "image": "epic1.png"},
+      {"name": "Epic Item 2", "probability": 0.2, "image": "epic2.png"},
+      {"name": "Epic Item 3", "probability": 0.15, "image": "epic3.png"},
+      {"name": "Epic Item 4", "probability": 0.1, "image": "epic4.png"},
+      {"name": "Epic Item 5", "probability": 0.08, "image": "epic5.png"},
+      {"name": "Epic Item 6", "probability": 0.06, "image": "epic6.png"},
+      {"name": "Epic Item 7", "probability": 0.04, "image": "epic7.png"},
+      {"name": "Epic Item 8", "probability": 0.04, "image": "epic8.png"},
+      {"name": "Epic Item 9", "probability": 0.03, "image": "epic9.png"}
+    ]
   },
   {
     "id": 7,
-    "name": "Crate 7",
+    "name": "PC Gaming",
+    "imageName": "pcgaming",
     "tokensPrice": 1000,
     "realPrice": 9.99,
-    "rarity": "legendary",
+    "rarity": "rare",
     "isFavorited": false,
-    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    "prizes": [
+      {
+        "name": "Legendary Item 1",
+        "probability": 0.35,
+        "image": "legendary1.png"
+      },
+      {
+        "name": "Legendary Item 2",
+        "probability": 0.2,
+        "image": "legendary2.png"
+      },
+      {
+        "name": "Legendary Item 3",
+        "probability": 0.15,
+        "image": "legendary3.png"
+      },
+      {
+        "name": "Legendary Item 4",
+        "probability": 0.1,
+        "image": "legendary4.png"
+      },
+      {
+        "name": "Legendary Item 5",
+        "probability": 0.07,
+        "image": "legendary5.png"
+      },
+      {
+        "name": "Legendary Item 6",
+        "probability": 0.05,
+        "image": "legendary6.png"
+      },
+      {
+        "name": "Legendary Item 7",
+        "probability": 0.03,
+        "image": "legendary7.png"
+      },
+      {
+        "name": "Legendary Item 8",
+        "probability": 0.03,
+        "image": "legendary8.png"
+      },
+      {
+        "name": "Legendary Item 9",
+        "probability": 0.02,
+        "image": "legendary9.png"
+      }
+    ]
   },
   {
     "id": 8,
-    "name": "Crate 8",
+    "name": "Supreme",
+    "imageName": "supreme",
     "tokensPrice": 1000,
     "realPrice": 9.99,
+    "rarity": "epic",
+    "isFavorited": false,
+    "prizes": [
+      {
+        "name": "Legendary Item 1",
+        "probability": 0.35,
+        "image": "legendary1.png"
+      },
+      {
+        "name": "Legendary Item 2",
+        "probability": 0.2,
+        "image": "legendary2.png"
+      },
+      {
+        "name": "Legendary Item 3",
+        "probability": 0.15,
+        "image": "legendary3.png"
+      },
+      {
+        "name": "Legendary Item 4",
+        "probability": 0.1,
+        "image": "legendary4.png"
+      },
+      {
+        "name": "Legendary Item 5",
+        "probability": 0.07,
+        "image": "legendary5.png"
+      },
+      {
+        "name": "Legendary Item 6",
+        "probability": 0.05,
+        "image": "legendary6.png"
+      },
+      {
+        "name": "Legendary Item 7",
+        "probability": 0.03,
+        "image": "legendary7.png"
+      },
+      {
+        "name": "Legendary Item 8",
+        "probability": 0.03,
+        "image": "legendary8.png"
+      },
+      {
+        "name": "Legendary Item 9",
+        "probability": 0.02,
+        "image": "legendary9.png"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Jordan",
+    "imageName": "jordan",
+    "tokensPrice": 1000,
+    "realPrice": 9.99,
+    "rarity": "epic",
+    "isFavorited": false,
+    "prizes": [
+      {
+        "name": "Legendary Item 1",
+        "probability": 0.35,
+        "image": "legendary1.png"
+      },
+      {
+        "name": "Legendary Item 2",
+        "probability": 0.2,
+        "image": "legendary2.png"
+      },
+      {
+        "name": "Legendary Item 3",
+        "probability": 0.15,
+        "image": "legendary3.png"
+      },
+      {
+        "name": "Legendary Item 4",
+        "probability": 0.1,
+        "image": "legendary4.png"
+      },
+      {
+        "name": "Legendary Item 5",
+        "probability": 0.07,
+        "image": "legendary5.png"
+      },
+      {
+        "name": "Legendary Item 6",
+        "probability": 0.05,
+        "image": "legendary6.png"
+      },
+      {
+        "name": "Legendary Item 7",
+        "probability": 0.03,
+        "image": "legendary7.png"
+      },
+      {
+        "name": "Legendary Item 8",
+        "probability": 0.03,
+        "image": "legendary8.png"
+      },
+      {
+        "name": "Legendary Item 9",
+        "probability": 0.02,
+        "image": "legendary9.png"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Rolex",
+    "imageName": "rolex",
+    "tokensPrice": 250,
+    "realPrice": 1.99,
     "rarity": "legendary",
     "isFavorited": false,
-    "prizes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    "prizes": [
+      {"name": "Rare Item 1", "probability": 0.3, "image": "rare1.png"},
+      {"name": "Rare Item 2", "probability": 0.25, "image": "rare2.png"},
+      {"name": "Rare Item 3", "probability": 0.15, "image": "rare3.png"},
+      {"name": "Rare Item 4", "probability": 0.1, "image": "rare4.png"},
+      {"name": "Rare Item 5", "probability": 0.08, "image": "rare5.png"},
+      {"name": "Rare Item 6", "probability": 0.05, "image": "rare6.png"},
+      {"name": "Rare Item 7", "probability": 0.03, "image": "rare7.png"},
+      {"name": "Rare Item 8", "probability": 0.02, "image": "rare8.png"},
+      {"name": "Rare Item 9", "probability": 0.02, "image": "rare9.png"}
+    ]
   }
 ]
