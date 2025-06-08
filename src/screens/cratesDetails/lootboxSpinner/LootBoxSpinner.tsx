@@ -1,7 +1,13 @@
 import React, {useRef, useState, useEffect, useMemo} from 'react';
-import {View, Dimensions, Animated, Image, ScrollView} from 'react-native';
+import {
+  View,
+  Dimensions,
+  Animated,
+  Image,
+  ScrollView,
+  FlatList,
+} from 'react-native';
 import {Button, Text} from '@ui-kitten/components';
-import {getCardColor} from '../../home/utils/getCardColors';
 
 const {width} = Dimensions.get('window');
 const ITEM_WIDTH = 100;
@@ -34,7 +40,6 @@ const LootboxItem = React.memo(({item}: {item: Prize}) => (
       width: ITEM_WIDTH,
       alignItems: 'center',
       paddingVertical: 8,
-      // backgroundColor: getCardColor(item.rarity),
     }}>
     <Image
       source={{uri: item.image}}
@@ -50,36 +55,23 @@ const LootboxSpinner: React.FC<LootboxSpinnerProps> = ({prizes}) => {
   const scrollViewRef = useRef<ScrollView>(null);
   const [selectedPrize, setSelectedPrize] = useState<Prize | null>(null);
   const [spinning, setSpinning] = useState(false);
+  const [displayPool, setDisplayPool] = useState<any[]>([]);
 
   const prizePool = useMemo(() => {
     return prizes.flatMap(prize => Array(prize.probability).fill(prize));
   }, [prizes]);
 
-  const REPEAT_TIMES = 3;
-
-  // ⛔ Nunca se vuelve a recalcular: se fija desde el principio
-  const stableDisplayPool = useMemo(() => {
+  const generateDisplayPool = () => {
+    const REPEAT_TIMES = 3;
     const fullPool = Array(REPEAT_TIMES)
       .fill(null)
       .flatMap(() => shuffleArray(prizePool));
     return [
-      {id: 'spacer-start'},
+      {id: 'spacer-start'} as any,
       ...fullPool.map((p, i) => ({...p, id: `${p.name}-${i}`})),
-      {id: 'spacer-end'},
+      {id: 'spacer-end'} as any,
     ];
-  }, []); // 👈 sin dependencias, nunca cambia
-
-  const startIndex = Math.floor(stableDisplayPool.length / 2);
-  const startOffset = startIndex * ITEM_WIDTH;
-  const MAX_OFFSET = stableDisplayPool.length * ITEM_WIDTH;
-  const CENTER_OFFSET = startIndex * ITEM_WIDTH;
-
-  useEffect(() => {
-    scrollViewRef.current?.scrollTo({
-      x: startOffset,
-      animated: false,
-    });
-  }, []);
+  };
 
   const animateScroll = (from: number, to: number, duration: number) => {
     return new Promise<void>(resolve => {
@@ -89,11 +81,7 @@ const LootboxSpinner: React.FC<LootboxSpinnerProps> = ({prizes}) => {
         const elapsed = now - startTime;
         const t = Math.min(elapsed / duration, 1);
         const easedT = 1 - Math.pow(1 - t, 3);
-        let current = from + (to - from) * easedT;
-
-        if (current > MAX_OFFSET * 0.9) {
-          current = CENTER_OFFSET + (current % CENTER_OFFSET);
-        }
+        const current = from + (to - from) * easedT;
 
         scrollViewRef.current?.scrollTo({
           x: current,
@@ -119,23 +107,39 @@ const LootboxSpinner: React.FC<LootboxSpinnerProps> = ({prizes}) => {
     setSpinning(true);
     setSelectedPrize(null);
 
-    const actualItemsCount = stableDisplayPool.length - 2;
+    const newDisplayPool = generateDisplayPool();
+    setDisplayPool(newDisplayPool);
+
+    await new Promise(res => setTimeout(res, 0)); // esperar un render para que displayPool se actualice
+
+    const actualItemsCount = newDisplayPool.length - 2;
     const loops = 3 * actualItemsCount;
     const targetIndex = Math.floor(Math.random() * actualItemsCount);
     const finalIndex = loops + targetIndex;
-    const adjustedIndex = finalIndex + 1;
-
+    const adjustedIndex = Math.min(finalIndex + 1, newDisplayPool.length - 2);
     const to = adjustedIndex * ITEM_WIDTH - SPACER;
-    const from = startOffset;
+    const from = Math.floor(newDisplayPool.length / 2) * ITEM_WIDTH;
 
     await animateScroll(from, to, 6000);
 
-    const selected = stableDisplayPool[(adjustedIndex % actualItemsCount) + 1]; // asegurar que index no se salga
+    const selected = newDisplayPool[adjustedIndex];
     setSelectedPrize(selected as Prize);
-    console.log('Premio seleccionado visualmente:', selected);
+    console.log('Premio seleccionado:', selected.name);
 
     setSpinning(false);
   };
+
+  useEffect(() => {
+    const initialPool = generateDisplayPool();
+    setDisplayPool(initialPool);
+
+    // Posicionar al centro
+    const initialOffset = Math.floor(initialPool.length / 2) * ITEM_WIDTH;
+    scrollViewRef.current?.scrollTo({
+      x: initialOffset,
+      animated: false,
+    });
+  }, []);
 
   return (
     <View style={{alignItems: 'center'}}>
@@ -165,7 +169,8 @@ const LootboxSpinner: React.FC<LootboxSpinnerProps> = ({prizes}) => {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{paddingHorizontal: SPACER}}
         scrollEventThrottle={16}>
-        {stableDisplayPool.map((item, index) => {
+        {displayPool.map((item, index) => {
+          if (!item?.id) return null;
           if (item.id.startsWith('spacer')) {
             return <View key={item.id} style={{width: ITEM_WIDTH}} />;
           }
@@ -179,6 +184,12 @@ const LootboxSpinner: React.FC<LootboxSpinnerProps> = ({prizes}) => {
         style={{marginVertical: 12, width: 150}}>
         {spinning ? 'Spinning...' : 'Spin'}
       </Button>
+
+      {selectedPrize && (
+        <Text category="h6" style={{marginTop: 8}}>
+          🎉 Ganaste: {selectedPrize.name}
+        </Text>
+      )}
     </View>
   );
 };
