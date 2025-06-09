@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Apple",
+    "name": "Apple Crate",
     "imageName": "apple",
     "tokensPrice": 100,
     "realPrice": 0.99,
@@ -75,7 +75,7 @@
   },
   {
     "id": 2,
-    "name": "Nintendo",
+    "name": "Nintendo Crate",
     "imageName": "nintendo",
     "tokensPrice": 100,
     "realPrice": 0.99,
@@ -149,7 +149,7 @@
   },
   {
     "id": 3,
-    "name": "PlayStation",
+    "name": "PlayStation Crate",
     "imageName": "playstation",
     "tokensPrice": 250,
     "realPrice": 1.99,
@@ -223,7 +223,7 @@
   },
   {
     "id": 4,
-    "name": "XBox",
+    "name": "XBox Crate",
     "imageName": "xbox",
     "tokensPrice": 250,
     "realPrice": 1.99,
@@ -297,7 +297,7 @@
   },
   {
     "id": 5,
-    "name": "Apple+",
+    "name": "Apple Premium Crate",
     "imageName": "apple2",
     "tokensPrice": 500,
     "realPrice": 4.99,
@@ -371,7 +371,7 @@
   },
   {
     "id": 6,
-    "name": "Nintendo+",
+    "name": "Nintendo Premium Crate",
     "imageName": "nintendo2",
 
     "tokensPrice": 500,
@@ -446,7 +446,7 @@
   },
   {
     "id": 7,
-    "name": "PC Gaming",
+    "name": "PC Gaming Crate",
     "imageName": "pcgaming",
     "tokensPrice": 1000,
     "realPrice": 9.99,
@@ -520,7 +520,7 @@
   },
   {
     "id": 8,
-    "name": "Supreme",
+    "name": "Supreme Crate",
     "imageName": "supreme",
     "tokensPrice": 1000,
     "realPrice": 9.99,
@@ -594,7 +594,7 @@
   },
   {
     "id": 9,
-    "name": "Jordan",
+    "name": "Jordan Crate",
     "imageName": "jordan",
     "tokensPrice": 1000,
     "realPrice": 9.99,
@@ -668,9 +668,9 @@
   },
   {
     "id": 10,
-    "name": "Rolex",
+    "name": "Rolex Crate",
     "imageName": "rolex",
-    "tokensPrice": 250,
+    "tokensPrice": 10000,
     "realPrice": 1.99,
     "rarity": "legendary",
     "isFavorited": false,

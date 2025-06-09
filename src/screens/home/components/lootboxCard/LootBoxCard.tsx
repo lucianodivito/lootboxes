@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text} from '@ui-kitten/components';
+import {Text, Layout} from '@ui-kitten/components';
 import {
   StyleSheet,
   View,
@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import {creditsToDollars} from '../../../../utils/moneyConversion';
 
 import FavoriteIcon from '../FavoriteIcon';
 
@@ -24,6 +25,8 @@ import nintendo2 from '../../../../../assets/crates/nintendo2.png';
 import supreme from '../../../../../assets/crates/supreme.png';
 import jordan from '../../../../../assets/crates/supreme.png';
 import rolex from '../../../../../assets/crates/rolex.png';
+
+import token from '../../../../../assets/token.png';
 
 import {
   getRarityBadgeGradient,
@@ -75,6 +78,7 @@ const LootBoxCard: React.FC<LootboxProps> = ({
   isFavorited,
   imageName,
   prizes,
+  tokensPrice,
 }): React.JSX.Element => {
   const {colors, locations} = getBackgroundGradient(rarity);
   const {handleCrateNativegate} = LootBoxCardViewModel();
@@ -84,47 +88,56 @@ const LootBoxCard: React.FC<LootboxProps> = ({
       <TouchableOpacity
         style={styles.card}
         activeOpacity={0.9}
-        onPress={() => handleCrateNativegate(prizes)}>
-        <View
-          style={[styles.cardInner, {backgroundColor: getCardColor(rarity)}]}>
-          <LinearGradient
-            colors={colors}
-            locations={locations}
-            start={{x: 0.5, y: 0}}
-            end={{x: 0.5, y: 1}}
-            style={StyleSheet.absoluteFill}
-          />
-          <ImageBackground
-            source={pattern}
-            resizeMode="cover"
-            style={StyleSheet.absoluteFillObject}
-            imageStyle={{opacity: 0.5}}
-          />
-
-          <View style={styles.cardTop}>
+        onPress={() => handleCrateNativegate(prizes, tokensPrice)}>
+        <View style={styles.cardInner}>
+          {/* Fondo gradiente hasta la imagen */}
+          <View style={styles.topSection}>
             <LinearGradient
-              colors={getRarityBadgeGradient(rarity)}
-              style={styles.badgeContainer}>
-              <Text category="label">
-                {rarity.charAt(0).toUpperCase() + rarity.slice(1)}
-              </Text>
-            </LinearGradient>
-            <FavoriteIcon
-              isFavorited={isFavorited}
-              onPress={() => alert(name)}
+              colors={colors}
+              locations={locations}
+              start={{x: 1, y: 0}}
+              end={{x: 0, y: 1}}
+              style={StyleSheet.absoluteFill}
             />
-          </View>
 
-          <View style={styles.imageContainer}>
             <ImageBackground
-              source={glowingGray}
-              style={styles.glowBackground}
-              imageStyle={styles.glowImage}>
-              <Image source={crateImages[imageName]} style={styles.image} />
-            </ImageBackground>
+              source={pattern}
+              resizeMode="cover"
+              style={StyleSheet.absoluteFillObject}
+              imageStyle={{opacity: 0.5}}
+            />
+
+            <View style={styles.cardTop}>
+              <LinearGradient
+                colors={getRarityBadgeGradient(rarity)}
+                style={styles.badgeContainer}>
+                <Text category="label">
+                  {rarity.charAt(0).toUpperCase() + rarity.slice(1)}
+                </Text>
+              </LinearGradient>
+            </View>
+
+            <View style={styles.imageContainer}>
+              <ImageBackground
+                source={glowingGray}
+                style={styles.glowBackground}
+                imageStyle={styles.glowImage}>
+                <Image source={crateImages[imageName]} style={styles.image} />
+              </ImageBackground>
+            </View>
           </View>
 
-          <Text category="h5">{name}</Text>
+          {/* Contenido textual */}
+          <Layout level="2" style={styles.bottomSection}>
+            <Text category="p1">{name}</Text>
+            <View style={styles.priceContainer}>
+              <Image source={token} style={styles.tokenImage} />
+              <Text category="h6">{tokensPrice.toLocaleString()}</Text>
+              <Text category="c1" appearance="hint" style={{marginLeft: 4}}>
+                ${creditsToDollars(tokensPrice)}
+              </Text>
+            </View>
+          </Layout>
         </View>
       </TouchableOpacity>
     </View>
@@ -145,29 +158,40 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   cardInner: {
-    padding: 12,
     borderRadius: 10,
-    height: 250,
-    alignItems: 'center',
-    position: 'relative',
+    overflow: 'hidden',
+  },
+  topSection: {
+    height: 190,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    overflow: 'hidden',
+  },
+  bottomSection: {
+    padding: 12,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
   },
   cardTop: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-start',
     width: '100%',
-    height: '12%',
+    paddingTop: 0,
+    paddingHorizontal: 0,
   },
   badgeContainer: {
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 25,
-    width: 90,
+    width: '50%',
+    paddingHorizontal: 14,
+    paddingVertical: 6,
+    borderTopRightRadius: 10,
+    borderBottomLeftRadius: 10,
     alignItems: 'center',
+    overflow: 'hidden',
   },
   imageContainer: {
     width: '100%',
-    height: '68%',
+    height: '80%',
   },
   glowBackground: {
     width: '100%',
@@ -184,7 +208,7 @@ const styles = StyleSheet.create({
   },
   glowImage: {
     borderRadius: 10,
-    opacity: 0,
+    opacity: 1,
     resizeMode: 'contain',
   },
   image: {
@@ -192,5 +216,15 @@ const styles = StyleSheet.create({
     height: '90%',
     resizeMode: 'contain',
     zIndex: 1,
+  },
+  priceContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 4,
+  },
+  tokenImage: {
+    width: 20,
+    height: 20,
+    marginRight: 8,
   },
 });

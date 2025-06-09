@@ -57,17 +57,17 @@ export const getBackgroundGradient = (rarity: Rarity) => {
   return {colors, locations};
 };
 
-export const getCardColor = (rarity: Rarity): string => {
+export const getCardColor = (rarity: Rarity, opacity = 1): string => {
   switch (rarity) {
     case 'common':
-      return '#5c5d78'; // gris lavanda claro, más brillante
+      return `rgba(92, 93, 120, ${opacity})`; // #5c5d78
     case 'rare':
-      return '#2d7dff'; // azul saturado eléctrico
+      return `rgba(45, 125, 255, ${opacity})`; // #2d7dff
     case 'epic':
-      return '#c03aff'; // púrpura neón
+      return `rgba(192, 58, 255, ${opacity})`; // #c03aff
     case 'legendary':
-      return '#ffb300'; // dorado brillante intenso
+      return `rgba(255, 179, 0, ${opacity})`; // #ffb300
     default:
-      return '#5c5d78'; // por defecto, un común brillante
+      return `rgba(92, 93, 120, ${opacity})`;
   }
 };

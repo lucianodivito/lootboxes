@@ -7,9 +7,9 @@ type DetailsRouteProp = RouteProp<RootStackParamList, 'Details'>;
 
 const CratesDetailsViewModel = () => {
   const route = useRoute<DetailsRouteProp>();
-  const {prizes} = route.params;
+  const {prizes, tokensPrice} = route.params;
 
-  return {prizes};
+  return {prizes, tokensPrice};
 };
 
 export default CratesDetailsViewModel;

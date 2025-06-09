@@ -8,7 +8,7 @@ import pattern from '../../../assets/patterns/pattern.png';
 import LootboxSpinner from './lootboxSpinner/LootBoxSpinner';
 
 const CratesDetails: React.FC = (): React.JSX.Element => {
-  const {prizes} = CratesDetailsViewModel();
+  const {prizes, tokensPrice} = CratesDetailsViewModel();
 
   const renderItem = ({item}: {item: any}) => {
     const color = getCardColor(item.rarity);
@@ -21,12 +21,12 @@ const CratesDetails: React.FC = (): React.JSX.Element => {
             {borderBottomWidth: 4, borderBottomColor: color},
           ]}
           level="2">
-          <ImageBackground
+          {/* <ImageBackground
             source={pattern}
             resizeMode="cover"
             style={StyleSheet.absoluteFillObject}
             imageStyle={{opacity: 0.5}}
-          />
+          /> */}
           <Text style={styles.probability}>{item.probability}%</Text>
           <Image source={{uri: item.image}} style={styles.image} />
           <Text category="s1">{item.name}</Text>
@@ -38,7 +38,7 @@ const CratesDetails: React.FC = (): React.JSX.Element => {
 
   return (
     <MainContainer>
-      <LootboxSpinner prizes={prizes} />
+      <LootboxSpinner prizes={prizes} tokensPrice={tokensPrice} />
       <FlatList
         data={prizes}
         renderItem={renderItem}

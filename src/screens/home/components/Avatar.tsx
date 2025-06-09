@@ -28,7 +28,7 @@ const themedStyles = StyleService.create({
   avatar: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#479fff',
+    backgroundColor: '#c98fff',
     borderRadius: 9999,
     marginRight: 12,
   },

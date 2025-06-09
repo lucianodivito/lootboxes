@@ -39,9 +39,9 @@ const Home: React.FC = (): React.JSX.Element => {
         ListHeaderComponent={() => (
           <>
             <UserHeader />
-            <Text category="h4" style={styles.headerText}>
+            {/* <Text category="h4" style={styles.headerText}>
               All boxes
-            </Text>
+            </Text> */}
           </>
         )}
         ListHeaderComponentStyle={styles.header}

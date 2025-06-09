@@ -4,7 +4,7 @@ import Home from '../screens/home/HomeView';
 import CratesDetails from '../screens/cratesDetails/CratesDetails';
 import {Prize} from '../screens/home/components/lootboxCard/LootBoxCard';
 
-type DetailsParams = {prizes: Prize[]};
+type DetailsParams = {prizes: Prize[]; tokensPrice: number};
 
 export type RootStackParamList = {
   Home: undefined;

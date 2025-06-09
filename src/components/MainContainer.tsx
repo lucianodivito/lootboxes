@@ -10,14 +10,14 @@ type Props = {
 const MainContainer: React.FC<Props> = ({children}) => {
   return (
     <Layout style={styles.mainContainer} level="1">
-      <ImageBackground
+      {/* <ImageBackground
         source={backgroundPattern}
         style={styles.background}
         resizeMode="repeat"
-        imageStyle={styles.imageStyle} // opcional para ajustar imagen
-      >
-        {children}
-      </ImageBackground>
+        imageStyle={styles.imageStyle} 
+      > */}
+      {children}
+      {/* </ImageBackground> */}
     </Layout>
   );
 };

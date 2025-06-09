@@ -5,9 +5,12 @@ import {
   Animated,
   Image,
   ScrollView,
+  StyleSheet,
   FlatList,
 } from 'react-native';
-import {Button, Text} from '@ui-kitten/components';
+import {Button, Text, Layout} from '@ui-kitten/components';
+import {getCardColor} from '../../home/utils/getCardColors';
+import MainContainer from '../../../components/MainContainer';
 
 const {width} = Dimensions.get('window');
 const ITEM_WIDTH = 100;
@@ -23,6 +26,7 @@ type Prize = {
 
 interface LootboxSpinnerProps {
   prizes: Prize[];
+  tokensPrice: number;
 }
 
 function shuffleArray<T>(array: T[]): T[] {
@@ -35,11 +39,12 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 const LootboxItem = React.memo(({item}: {item: Prize}) => (
-  <View
+  <Layout
+    level="2"
     style={{
       width: ITEM_WIDTH,
       alignItems: 'center',
-      paddingVertical: 8,
+      paddingVertical: 12,
     }}>
     <Image
       source={{uri: item.image}}
@@ -48,10 +53,13 @@ const LootboxItem = React.memo(({item}: {item: Prize}) => (
     <Text category="c1" numberOfLines={1}>
       {item.name}
     </Text>
-  </View>
+  </Layout>
 ));
 
-const LootboxSpinner: React.FC<LootboxSpinnerProps> = ({prizes}) => {
+const LootboxSpinner: React.FC<LootboxSpinnerProps> = ({
+  prizes,
+  tokensPrice,
+}) => {
   const scrollViewRef = useRef<ScrollView>(null);
   const [selectedPrize, setSelectedPrize] = useState<Prize | null>(null);
   const [spinning, setSpinning] = useState(false);
@@ -122,7 +130,7 @@ const LootboxSpinner: React.FC<LootboxSpinnerProps> = ({prizes}) => {
 
     await animateScroll(from, to, 6000);
 
-    const selected = newDisplayPool[adjustedIndex];
+    const selected = newDisplayPool[adjustedIndex - 2];
     setSelectedPrize(selected as Prize);
     console.log('Premio seleccionado:', selected.name);
 
@@ -177,21 +185,40 @@ const LootboxSpinner: React.FC<LootboxSpinnerProps> = ({prizes}) => {
           return <LootboxItem key={item.id} item={item} />;
         })}
       </Animated.ScrollView>
-
-      <Button
-        onPress={handleSpin}
-        disabled={spinning}
-        style={{marginVertical: 12, width: 150}}>
-        {spinning ? 'Spinning...' : 'Spin'}
-      </Button>
-
-      {selectedPrize && (
-        <Text category="h6" style={{marginTop: 8}}>
-          🎉 Ganaste: {selectedPrize.name}
-        </Text>
-      )}
+      <View style={styles.buttonsContainer}>
+        <Button
+          onPress={handleSpin}
+          disabled={spinning}
+          style={styles.demoSpinButton}>
+          {spinning ? 'Spinning...' : 'Demo spin'}
+        </Button>
+        <Button
+          onPress={handleSpin}
+          disabled={spinning}
+          style={styles.spinButton}>
+          {spinning ? 'Spinning...' : `Spin for $${tokensPrice}`}
+        </Button>
+      </View>
     </View>
   );
 };
 
 export default LootboxSpinner;
+
+const styles = StyleSheet.create({
+  buttonsContainer: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  demoSpinButton: {
+    width: '48%',
+    marginVertical: 12,
+    backgroundColor: '#8F9BB3',
+    borderWidth: 0,
+  },
+  spinButton: {
+    width: '48%',
+    marginVertical: 12,
+  },
+});
