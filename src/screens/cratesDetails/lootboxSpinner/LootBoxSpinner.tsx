@@ -6,10 +6,8 @@ import {
   Image,
   ScrollView,
   StyleSheet,
-  FlatList,
 } from 'react-native';
 import {Button, Text, Layout} from '@ui-kitten/components';
-import {getCardColor} from '../../home/utils/getCardColors';
 import MainContainer from '../../../components/MainContainer';
 
 const {width} = Dimensions.get('window');
@@ -38,29 +36,59 @@ function shuffleArray<T>(array: T[]): T[] {
   return newArr;
 }
 
-const LootboxItem = React.memo(({item}: {item: Prize}) => (
-  <Layout
-    level="2"
-    style={{
-      width: ITEM_WIDTH,
-      alignItems: 'center',
-      paddingVertical: 12,
-    }}>
-    <Image
-      source={{uri: item.image}}
-      style={{width: 80, height: 80, resizeMode: 'contain', marginBottom: 4}}
-    />
-    <Text category="c1" numberOfLines={1}>
-      {item.name}
-    </Text>
-  </Layout>
-));
+const LootboxItem = React.memo(
+  ({
+    item,
+    index,
+    scrollX,
+  }: {
+    item: Prize;
+    index: number;
+    scrollX: Animated.Value;
+  }) => {
+    const inputRange = [
+      (index - 1) * ITEM_WIDTH,
+      index * ITEM_WIDTH,
+      (index + 1) * ITEM_WIDTH,
+    ];
+
+    const scale = scrollX.interpolate({
+      inputRange,
+      outputRange: [0.8, 1.2, 0.8],
+      extrapolate: 'clamp',
+    });
+
+    return (
+      <Animated.View
+        style={{
+          width: ITEM_WIDTH,
+          alignItems: 'center',
+          paddingVertical: 12,
+          transform: [{scale}],
+        }}>
+        <Image
+          source={{uri: item.image}}
+          style={{
+            width: 80,
+            height: 80,
+            resizeMode: 'contain',
+            marginBottom: 4,
+          }}
+        />
+        <Text category="c1" numberOfLines={1}>
+          {item.name}
+        </Text>
+      </Animated.View>
+    );
+  },
+);
 
 const LootboxSpinner: React.FC<LootboxSpinnerProps> = ({
   prizes,
   tokensPrice,
 }) => {
   const scrollViewRef = useRef<ScrollView>(null);
+  const scrollX = useRef(new Animated.Value(0)).current;
   const [selectedPrize, setSelectedPrize] = useState<Prize | null>(null);
   const [spinning, setSpinning] = useState(false);
   const [displayPool, setDisplayPool] = useState<any[]>([]);
@@ -118,7 +146,7 @@ const LootboxSpinner: React.FC<LootboxSpinnerProps> = ({
     const newDisplayPool = generateDisplayPool();
     setDisplayPool(newDisplayPool);
 
-    await new Promise(res => setTimeout(res, 0)); // esperar un render para que displayPool se actualice
+    await new Promise(res => setTimeout(res, 0));
 
     const actualItemsCount = newDisplayPool.length - 2;
     const loops = 3 * actualItemsCount;
@@ -176,15 +204,27 @@ const LootboxSpinner: React.FC<LootboxSpinnerProps> = ({
         scrollEnabled={false}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{paddingHorizontal: SPACER}}
-        scrollEventThrottle={16}>
+        scrollEventThrottle={16}
+        onScroll={Animated.event(
+          [{nativeEvent: {contentOffset: {x: scrollX}}}],
+          {useNativeDriver: true},
+        )}>
         {displayPool.map((item, index) => {
           if (!item?.id) return null;
           if (item.id.startsWith('spacer')) {
             return <View key={item.id} style={{width: ITEM_WIDTH}} />;
           }
-          return <LootboxItem key={item.id} item={item} />;
+          return (
+            <LootboxItem
+              key={item.id}
+              item={item}
+              index={index}
+              scrollX={scrollX}
+            />
+          );
         })}
       </Animated.ScrollView>
+
       <View style={styles.buttonsContainer}>
         <Button
           onPress={handleSpin}

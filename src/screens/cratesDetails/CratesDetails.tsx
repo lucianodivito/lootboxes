@@ -15,12 +15,7 @@ const CratesDetails: React.FC = (): React.JSX.Element => {
 
     return (
       <View style={styles.itemWrapper}>
-        <Layout
-          style={[
-            styles.item,
-            {borderBottomWidth: 4, borderBottomColor: color},
-          ]}
-          level="2">
+        <Layout style={styles.item} level="2">
           {/* <ImageBackground
             source={pattern}
             resizeMode="cover"
